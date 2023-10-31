@@ -1,0 +1,57 @@
+class Ozodbek(QMainWindow):
+    def init(self):
+        super().init()
+
+        c1 = Color("green")
+        c2 = Color("yellow")
+        c3 = Color("#a58901")
+        c4 = Color("#99e3FF")
+        hl = QHBoxLayout()
+        hl.addWidget(c1)
+        hl.addWidget(c2)
+        hl.addWidget(c3)
+        hl.addWidget(c4)
+        w = QWidget()
+        w.setLayout(hl)
+
+
+        d1 = Color("brown")
+        d2 = Color("#FF98E1")
+        h2 = QHBoxLayout()
+        h2.addWidget(d1)
+        h2.addWidget(d2)
+        w1 = QWidget()
+        w1.setLayout(h2)
+
+
+        e1 = Color("green")
+        e2 = Color("red")
+        e3 = Color("yellow")
+        h3 = QHBoxLayout()
+        h3.addWidget(e1)
+        h3.addWidget(e2)
+        h3.addWidget(e3)
+        w2 = QWidget()
+        w2.setLayout(h3)
+
+
+        ver = QVBoxLayout()
+        ver.addWidget(w)
+        ver.addWidget(w1)
+        ver.addWidget(w2)
+        ver_wid = QWidget()
+        ver_wid.setLayout(ver)
+
+        ver2 = QVBoxLayout()
+        ver2.addWidget(Color("grey"))
+        ver2.addWidget(Color("orange"))
+        ver2.addWidget(Color("blue"))
+        ver_wid1 = QWidget()
+        ver_wid1.setLayout(ver2)
+
+        eng_kotta_lay = QHBoxLayout()
+        eng_kotta_lay.addWidget(ver_wid1)
+        eng_kotta_lay.addWidget(ver_wid)
+        eng_kotta_wid = QWidget()
+        eng_kotta_wid.setLayout(eng_kotta_lay)
+        self.setCentralWidget(ver_wid)
